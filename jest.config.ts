@@ -4,7 +4,7 @@ const config: Config.InitialOptions = {
     preset: 'ts-jest',
     testEnvironment: 'node',
     testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
-    moduleFileExtensions: ['ts', 'tsx'],
+    moduleFileExtensions: ['ts', 'tsx', 'js'],
     silent: true,
 };
 

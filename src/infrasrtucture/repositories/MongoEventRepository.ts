@@ -1,6 +1,28 @@
 import { Event } from '../../domain/entities/Event';
 import { EventRepository } from '../../domain/interfaces/EventRepository';
 import { EventModel } from '../../domain/entities/EventM';
+import mongoose from 'mongoose';
+import { logger } from '../logger';
+
+const db = process.env.DB_STRING as string;
+mongoose.set('strictQuery', false);
+
+if (!db) {
+    throw new Error(
+        'Database connection string is not defined in env variables',
+    );
+}
+
+mongoose
+    .connect(db, {
+        serverSelectionTimeoutMS: 5000,
+    })
+    .then(() => {
+        logger.info('Connected to the database');
+    })
+    .catch((err) => {
+        throw new Error('Database connection error:' + err);
+    });
 
 export class MongoEventRepository implements EventRepository {
     async findAll(): Promise<Event[]> {

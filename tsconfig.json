@@ -8,11 +8,11 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "types": ["node", "typescript"]
+    "types": ["node", "typescript", "jest"]
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"],
-  "ts-node": {
+  "ts-node-dev": {
         "esm": true,
         "compiler": "typescript",
         "compilerOptions": {

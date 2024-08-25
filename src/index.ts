@@ -11,7 +11,9 @@ app.use(express.json());
 app.use(errorHandler);
 app.use('/events', eventRoutes);
 
-const PORT = process.env.PORT;
+const PORT = 3000;
 app.listen(PORT, () => {
     logger.info(`Server is running on port ${PORT}`);
 });
+
+export default app;
