@@ -1,4 +1,4 @@
-import { EventRepository } from '../domain/interfaces/EventRepository';
+import { EventRepository } from '../domain/interfaces/EventRepository.js';
 
 export class DeleteEvent {
     constructor(private eventRepository: EventRepository) {}

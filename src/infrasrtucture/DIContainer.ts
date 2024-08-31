@@ -1,9 +1,9 @@
-import { MongoEventRepository } from './repositories/MongoEventRepository';
-import { GetAllEvents } from '../use-cases/GetAllEvents';
-import { GetEventById } from '../use-cases/GetEventById';
-import { CreateEvent } from '../use-cases/CreateEvent';
-import { UpdateEvent } from '../use-cases/UpdateEvent';
-import { DeleteEvent } from '../use-cases/DeleteEvent';
+import { MongoEventRepository } from './repositories/MongoEventRepository.js';
+import { GetAllEvents } from '../use-cases/GetAllEvents.js';
+import { GetEventById } from '../use-cases/GetEventById.js';
+import { CreateEvent } from '../use-cases/CreateEvent.js';
+import { UpdateEvent } from '../use-cases/UpdateEvent.js';
+import { DeleteEvent } from '../use-cases/DeleteEvent.js';
 
 class DIContainer {
     private static _eventRepository = new MongoEventRepository();

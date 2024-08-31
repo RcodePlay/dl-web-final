@@ -1,8 +1,11 @@
-import { Event } from '../../domain/entities/Event';
-import { EventRepository } from '../../domain/interfaces/EventRepository';
-import { EventModel } from '../../domain/entities/EventM';
+import { Event } from '../../domain/entities/Event.js';
+import { EventRepository } from '../../domain/interfaces/EventRepository.js';
+import { EventModel } from '../../domain/entities/EventM.js';
 import mongoose from 'mongoose';
-import { logger } from '../logger';
+import { logger } from '../logger.js';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const db = process.env.DB_STRING as string;
 mongoose.set('strictQuery', false);

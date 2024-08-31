@@ -1,5 +1,5 @@
-import { EventRepository } from '../domain/interfaces/EventRepository';
-import { Event } from '../domain/entities/Event';
+import { EventRepository } from '../domain/interfaces/EventRepository.js';
+import { Event } from '../domain/entities/Event.js';
 
 export class UpdateEvent {
     constructor(private eventRepository: EventRepository) {}

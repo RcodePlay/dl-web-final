@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { DIContainer } from '../../infrasrtucture/DIContainer';
+import { DIContainer } from '../../infrasrtucture/DIContainer.js';
 
 export class EventController {
     private getAllEvents = DIContainer.getGetAllEventsUseCase();

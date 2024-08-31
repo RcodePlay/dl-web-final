@@ -1,4 +1,4 @@
-import { EventRepository } from '../domain/interfaces/EventRepository';
+import { EventRepository } from '../domain/interfaces/EventRepository.js';
 
 export class GetEventById {
     constructor(private eventRepository: EventRepository) {}
