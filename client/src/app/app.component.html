@@ -1,2 +1,28 @@
-<h1>Hello world!</h1>
-<p>The website is working</p>
+<header>
+    <nav>
+        <ul id="main-nav">
+            <li><a routerLink="/home" routerLinkActive="active">Domov</a></li>
+            <li><a routerLink="/about" routerLinkActive="active">O nás</a></li>
+            <li>
+                <a routerLink="/events" routerLinkActive="active">Udalosti</a>
+            </li>
+            <li>
+                <a routerLink="/support" routerLinkActive="active"
+                    >Podpor nás</a
+                >
+            </li>
+        </ul>
+    </nav>
+    <!--PLACEHOLDER - MAIN LOGO-->
+</header>
+
+<main>
+    <router-outlet></router-outlet>
+</main>
+
+<footer>
+    <p>Ja som foter</p>
+    <p>obsahujem (ne)importantne info</p>
+    <hr />
+    <p>copyrighty, shoutouty a dalsi hmyz</p>
+</footer>
