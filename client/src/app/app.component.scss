@@ -1,5 +1,6 @@
 header {
     width: 100lvw;
+    background-color: #f5f5f5;
 }
 
 nav {
@@ -56,6 +57,8 @@ nav {
 }
 
 footer {
+    margin: 0;
+    padding: 0;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -70,7 +73,6 @@ footer hr {
 }
 
 // Responsive design
-// 69
 
 @media (max-width: 600px) {
     #main-nav {
