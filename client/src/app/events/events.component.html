@@ -1,1 +1,7 @@
-<p>events works!</p>
+<div class="event" *ngFor="let event of events">
+    <h2>{{ event.title }}</h2>
+    <h4>{{ event.author }}</h4>
+    <p>{{ event.publishedDate | date }}</p>
+    <h5>{{ event.content }}</h5>
+</div>
+<p>events are working</p>
