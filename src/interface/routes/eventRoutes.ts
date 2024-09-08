@@ -93,6 +93,7 @@ router.get('/:id', (req, res) => eventController.getById(req, res));
  *          example:
  *            title: three-day spring 2024
  *            content: Three-day sleepover in spring 2024
+ *            author: admin
  *            tags: ["three-day"]
  *    responses:
  *      200:
@@ -119,6 +120,7 @@ router.post('/addEvent', (req, res) => eventController.create(req, res));
  *            _id: 123456
  *            title: Summer camp 2025
  *            content: Summer camp of 2025
+ *            author: admin
  *            tags: ["camp"]
  *    responses:
  *      200:

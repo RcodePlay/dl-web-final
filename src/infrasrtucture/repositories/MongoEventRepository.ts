@@ -37,16 +37,23 @@ export class MongoEventRepository implements EventRepository {
     }
 
     async create(event: Event): Promise<Event> {
-        const newEvent = new EventModel(event);
+        const recievedEvent = {
+            ...event,
+            publishedDate: new Date(),
+        };
+        const newEvent = new EventModel(recievedEvent);
         await newEvent.save();
+        logger.info('Created an event');
         return newEvent;
     }
 
     async update(event: Event): Promise<void> {
+        logger.info('Updated an Event');
         await EventModel.findByIdAndUpdate(event._id, event);
     }
 
     async delete(id: string): Promise<void> {
+        logger.info('Deleted an Event');
         await EventModel.findByIdAndDelete(id);
     }
 }
