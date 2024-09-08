@@ -105,17 +105,10 @@ router.post('/addEvent', (req, res) => eventController.create(req, res));
 // /PUT edit an existing event
 /**
  * @swagger
- * /events/editEvent/{id}:
+ * /events/editEvent/:
  *  put:
  *    summary: Edit Event
  *    description: Edit Event
- *    parameters:
- *      - in: path
- *        name: id
- *        schema:
- *          type: string
- *        required: true
- *        description: Event id
  *    requestBody:
  *      description: A JSON object containing Event information
  *      content:
@@ -123,6 +116,7 @@ router.post('/addEvent', (req, res) => eventController.create(req, res));
  *          schema:
  *            $ref: '#/components/schemas/Event'
  *          example:
+ *            _id: 123456
  *            title: Summer camp 2025
  *            content: Summer camp of 2025
  *            tags: ["camp"]
