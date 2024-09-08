@@ -1,5 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
+
 dotenv.config();
 
 import { errorHandler } from './interface/middleware/errorHandler.js';
@@ -11,7 +13,8 @@ const app = express();
 
 app.use(express.json());
 app.use(errorHandler);
-app.use('/events', eventRoutes);
+app.use('/events', eventRoutes, cors());
+app.use(cors({ origin: 'http://localhost:4200/' }));
 setupSwagger(app);
 
 const PORT = 3000;
