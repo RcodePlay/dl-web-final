@@ -1,21 +1,14 @@
-<div class="about-component">
-    <router-outlet></router-outlet>
+<div class="page-custom">
+    <h2>O nás</h2>
+    <div *ngFor="let division of divisions; let i = index" class="info-div">
+        <button (click)="toggleDivision(i)">
+            {{ division.name }}
+        </button>
+        <div *ngIf="activeDivision === i" class="info-div">
+            <h2>{{ division.name }}</h2>
+            <h3>Vedúci: {{ division.leaders }}</h3>
+            <h3>Dátum založenia: {{ division.dateCreated }}</h3>
+            <p class="description">{{ division.description }}</p>
+        </div>
+    </div>
 </div>
-
-<nav>
-    <h2>Oddiely:</h2>
-    <ul>
-        <li>
-            <a routerLink="zbor" routerLinkActive="active">Zbor</a>
-        </li>
-        <li>
-            <a routerLink="oddiel1" routerLinkActive="active">Division 1</a>
-        </li>
-        <li>
-            <a routerLink="oddiel2" routerLnikActive="active">Division 2</a>
-        </li>
-        <li>
-            <a routerLink="oddiel3" routerLinkActice="active">Division 3</a>
-        </li>
-    </ul>
-</nav>
