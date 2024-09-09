@@ -11,6 +11,12 @@ nav {
     background-color: #111;
 }
 
+header h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #main-nav {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     list-style-type: none;
