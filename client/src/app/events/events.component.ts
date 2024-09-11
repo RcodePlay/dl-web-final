@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { EventService } from '@app/event.service';
+import { Component, OnInit, Inject } from '@angular/core';
+import { EventService } from '../event.service';
 @Component({
     selector: 'app-events',
     standalone: true,
@@ -10,12 +9,13 @@ import { EventService } from '@app/event.service';
     styleUrl: './events.component.scss',
 })
 export class EventsComponent implements OnInit {
-    constructor(private event: EventService) {}
+    // I've never before seen someone use @Inject() for using a service in a component
+    constructor(@Inject(EventService) private event: EventService) {}
 
     events: any = [];
 
     ngOnInit(): void {
-        this.event.getEvents().subscribe((recievedEvents) => {
+        this.event.getEvents().subscribe((recievedEvents: any) => {
             this.events = recievedEvents;
         });
         console.log(this.events);
