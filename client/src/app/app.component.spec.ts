@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -9,6 +11,21 @@ describe('AppComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [AppComponent],
+            providers: [
+                HttpClient,
+                {
+                    provide: ActivatedRoute, // Mock ActivatedRoute
+                    useValue: {
+                        params: of({ id: '123' }), // Mock route parameters
+                        queryParams: of({}), // Mock query parameters if needed
+                        snapshot: {
+                            paramMap: {
+                                get: () => '123', // Mock paramMap access
+                            },
+                        },
+                    },
+                },
+            ],
         }).compileComponents();
 
         fixture = TestBed.createComponent(AppComponent);
