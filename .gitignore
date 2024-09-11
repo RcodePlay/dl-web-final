@@ -4,3 +4,9 @@ node_modules
 .env
 
 /client/.angular
+/client/.vscode
+
+/client/dist
+/client/tmp
+/client/out-tsc
+/client/bazel-out
