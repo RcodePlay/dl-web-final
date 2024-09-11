@@ -1,3 +1,7 @@
+$palette-black: #2d2b29;
+$palette-background: #e9eaf1;
+$palette-accent: #fb3732;
+
 body {
     align-items: center;
     justify-items: center;
@@ -8,6 +12,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    background-color: $palette-background;
 }
 
 .page {
