@@ -12,26 +12,30 @@ export class AboutComponent {
 
     divisions = [
         {
-            name: 'Zbor',
-            leaders: 'Pavol Marcincin',
+            name: '4. zbor Dzivé Labute',
+            leader: 'Pavol Marcinčin',
+            coleader: 'Adriána Čikotová',
             dateCreated: '2024',
             description: '',
         },
         {
-            name: 'Division 1',
-            leaders: '',
+            name: '1. oddiel Tajomná Džungľa',
+            leader: 'Adriána Čikotová',
+            coleader: 'Eliška Zámborská',
             dateCreated: '2024',
             description: '',
         },
         {
-            name: 'Division 2',
-            leaders: '',
+            name: '2. oddiel Ambystoma',
+            leader: 'Gabriel Breza',
+            coleader: 'Martin Šimčák',
             dateCreated: '2024',
             description: '',
         },
         {
-            name: 'Division 3',
-            leaders: '',
+            name: '7. oddiel Thestrali',
+            leader: '',
+            coleader: '',
             dateCreated: '2024',
             description: '',
         },

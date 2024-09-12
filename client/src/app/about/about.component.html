@@ -6,7 +6,8 @@
         </button>
         <div *ngIf="activeDivision === i" class="info-div">
             <h2>{{ division.name }}</h2>
-            <h3>Vedúci: {{ division.leaders }}</h3>
+            <h3>Vedúci: {{ division.leader }}</h3>
+            <h3>Zástupca vedúceho: {{ division.coleader }}</h3>
             <h3>Dátum založenia: {{ division.dateCreated }}</h3>
             <p class="description">{{ division.description }}</p>
         </div>
