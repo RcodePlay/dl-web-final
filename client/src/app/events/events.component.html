@@ -1,10 +1,26 @@
 <div class="page">
     <h1>Udalosti</h1>
 
-    <div class="event" *ngFor="let event of events">
-        <h2>{{ event.title }}</h2>
-        <h4>{{ event.author }}</h4>
-        <p>{{ event.publishedDate | date }}</p>
-        <h5>{{ event.content }}</h5>
+    <div class="event-container" [class.blurred]="selectedEvent">
+        <div
+            class="event-item"
+            *ngFor="let event of events"
+            (click)="openEventDetails(event)"
+        >
+            <h2>{{ event.title }}</h2>
+            <h4>Autor: {{ event.author }}</h4>
+            <p>{{ event.publishedDate | date }}</p>
+            <!-- <h5>{{ event.content }}</h5> -->
+        </div>
+    </div>
+
+    <div *ngIf="selectedEvent" class="event-overlay">
+        <div class="event-details" (click)="onEventDetailsClick($event)">
+            <h2>{{ selectedEvent.title }}</h2>
+            <p>{{ selectedEvent.publishedDate | date }}</p>
+            <p>Autor: {{ selectedEvent.author }}</p>
+            <p>{{ selectedEvent.content }}</p>
+            <button (click)="closeEventDetails()">Close</button>
+        </div>
     </div>
 </div>
