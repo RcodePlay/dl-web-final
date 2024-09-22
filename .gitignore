@@ -11,3 +11,5 @@ node_modules
 /client/out-tsc
 /client/bazel-out
 client/.angular/
+logs/error.log
+client/.angular/cache/18.2.2/vite/deps/
