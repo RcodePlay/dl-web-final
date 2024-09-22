@@ -17,7 +17,7 @@ app.use('/events', eventRoutes, cors());
 app.use(cors({ origin: 'http://localhost:4200/' }));
 setupSwagger(app);
 
-const PORT = 3000;
+const PORT = process.env.PORT as unknown as number | 3000;
 app.listen(PORT, () => {
     logger.info(`Server is running on port ${PORT}`);
 });
