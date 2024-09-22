@@ -23,14 +23,16 @@ export class AboutComponent {
             leader: 'Adriána Čikotová',
             coleader: 'Eliška Zámborská',
             dateCreated: '2024',
-            description: '',
+            description:
+                'Oddiel pre deti vo vlčiackom veku (7 - 10 rokov). Družiny patriace pod tento oddiel: Vlci, Medvedíky, Nová chlapčenská',
         },
         {
             name: '2. oddiel Ambystoma',
             leader: 'Gabriel Breza',
             coleader: 'Martin Šimčák',
             dateCreated: '2024',
-            description: '',
+            description:
+                'Oddiel pre mladých v skautskom (11 - 15 rokov) a rangerskom (15 - 18 rokov) veku. Družiny patriace pod tento oddiel: Želvy, Patkane, Kačky',
         },
         {
             name: '7. oddiel Thestrali',
