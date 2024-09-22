@@ -94,13 +94,25 @@ footer a {
 }
 
 // Responsive design
-
-@media (max-width: 600px) {
-    // #main-nav {
-    //     flex-direction: column;
-    // }
-
+@media (max-width: 768px) {
     #main-nav li {
         margin: 0 10px 0 0;
     }
+
+    #main-nav {
+        height: 45px;
+    }
+
+    img {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1400px) {
 }
