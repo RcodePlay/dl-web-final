@@ -11,9 +11,7 @@ const db = process.env.DB_STRING as string;
 mongoose.set('strictQuery', false);
 
 if (!db) {
-    throw new Error(
-        'Database connection string is not defined in env variables',
-    );
+    logger.error('Database connection string is not defined in env variables');
 }
 
 mongoose
@@ -24,7 +22,7 @@ mongoose
         logger.info('Connected to the database');
     })
     .catch((err) => {
-        throw new Error('Database connection error:' + err);
+        logger.error('Database connection error:' + err);
     });
 
 export class MongoEventRepository implements EventRepository {
@@ -43,17 +41,17 @@ export class MongoEventRepository implements EventRepository {
         };
         const newEvent = new EventModel(recievedEvent);
         await newEvent.save();
-        logger.info('Created an event');
+        logger.http('Created an event');
         return newEvent;
     }
 
     async update(event: Event): Promise<void> {
-        logger.info('Updated an Event');
+        logger.http('Updated an Event');
         await EventModel.findByIdAndUpdate(event._id, event);
     }
 
     async delete(id: string): Promise<void> {
-        logger.info('Deleted an Event');
+        logger.http('Deleted an Event');
         await EventModel.findByIdAndDelete(id);
     }
 }
