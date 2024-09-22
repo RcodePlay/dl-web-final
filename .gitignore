@@ -3,7 +3,7 @@ node_modules
 .github/workflows/ci.yml
 .env
 
-/client/.angular
+/client/.angular/cache/
 /client/.vscode
 
 /client/dist
