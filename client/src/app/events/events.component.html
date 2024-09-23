@@ -10,6 +10,9 @@
             <h2>{{ event.title }}</h2>
             <h4>Autor: {{ event.author }}</h4>
             <p>{{ event.publishedDate | date }}</p>
+            <p *ngIf="event.dateOfEvent">
+                Dátum udalosti: {{ event.dateOfEvent | date }}
+            </p>
             <!-- <h5>{{ event.content }}</h5> -->
         </div>
     </div>
@@ -18,6 +21,9 @@
         <div class="event-details" (click)="onEventDetailsClick($event)">
             <h2>{{ selectedEvent.title }}</h2>
             <p>{{ selectedEvent.publishedDate | date }}</p>
+            <p *ngIf="selectedEvent.dateOfEvent">
+                Dátum udalosti: {{ selectedEvent.dateOfEvent | date }}
+            </p>
             <p>Autor: {{ selectedEvent.author }}</p>
             <p>{{ selectedEvent.content }}</p>
             <button (click)="closeEventDetails()">Close</button>

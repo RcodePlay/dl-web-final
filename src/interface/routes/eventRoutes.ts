@@ -28,6 +28,10 @@ const eventController = new EventController();
  *           type: string
  *           format: date
  *           description: Event creation date (in ISO 8601 format)
+ *         dateOfEvent:
+ *           type: string
+ *           format: date
+ *           description: Date of occurence of event (optional)
  *         tags:
  *           type: array
  *           description: Event tags (optional)

@@ -28,5 +28,6 @@ export interface Event {
     author: string;
     content: string;
     publishedDate: Date;
+    dateOfEvent: Date;
     tags: [];
 }

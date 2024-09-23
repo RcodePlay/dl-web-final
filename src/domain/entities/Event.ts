@@ -5,6 +5,7 @@ export class Event {
         public author: string,
         public content: string,
         public publishedDate: Date,
+        public dateOfEvent: Date,
         public tags: [],
     ) {}
 }

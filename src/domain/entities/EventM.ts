@@ -5,6 +5,7 @@ interface IEvent extends Document {
     author: string;
     content: string;
     publishedDate: Date;
+    dateOfEvent: Date;
     tags: [];
 }
 
@@ -13,6 +14,7 @@ const EventSchema: Schema = new Schema({
     author: { type: String, required: true },
     content: { type: String, required: true },
     publishedDate: { type: Date },
+    dateOfEvent: { type: Date },
     tags: { type: Array, required: false },
 });
 
