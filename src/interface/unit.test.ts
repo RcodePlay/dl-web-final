@@ -2,11 +2,14 @@ import supertest from 'supertest';
 import server from '../index';
 import { logger } from '../infrasrtucture/logger';
 
-const reqWithSupertest = supertest(server);
-
-describe('GET "/"', () => {
-    test('GET "/" returns all events', async () => {
-        const res = await reqWithSupertest.get('/events');
-        expect(res.status).toEqual(200);
+describe('GET "/events"', () => {
+    it('should return all events', async () => {
+        return supertest(server)
+            .get('/events')
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .then((res) => {
+                expect(res.statusCode).toBe(200);
+            });
     });
 });
