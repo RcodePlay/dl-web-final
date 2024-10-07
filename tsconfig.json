@@ -8,7 +8,12 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "types": ["node", "typescript", "jest"]
+    "types": ["node", "typescript", "jest"],
+    "baseUrl": "src",
+    "paths": {
+      "@middleware/*": ["interface/middleware/*"],
+      "@routes/*": ["interface/routes/*"]
+    },
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"],
@@ -16,8 +21,8 @@
         "esm": true,
         "compiler": "typescript",
         "compilerOptions": {
-            "module": "ESNext",
-            "moduleResolution": "Node"
+          "module": "ESNext",
+          "moduleResolution": "Node",
         }
       }
 }
